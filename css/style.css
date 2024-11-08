@@ -386,17 +386,20 @@ h6,
     background-color: white;
     padding: 20px 0;
 }
-
 .marquee-content {
     display: flex;
-    gap: 40px;
-    animation: scroll 20s linear infinite;
+    gap: 40px;  
 }
-
+.scrol-left{
+    animation: scroll-left 10s linear infinite;
+}
+.scroll-right{
+    animation: scroll-right 10s linear infinite;
+}
 .marquee-content img {
-    height: 60px;
-    opacity: 0.8;
-    transition: transform 0.3s, opacity 0.3s;
+    height: 50px;
+    opacity: 0.7;
+    transition: transform 0.8s, opacity 0.3s;
 }
 
 .marquee-content img:hover {
@@ -410,36 +413,21 @@ h6,
     color: white;
 }
 
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
-.scrolling-text {
-    width: 100%;                /* Full-width container */
-    white-space: nowrap;         /* Prevent line break */
-    overflow: hidden;            /* Hide overflow */
-    position: relative; 
-    animation: scroll-left 10s linear infinite;         /* Set position */
-}
-
-.scrolling-text::before {
-    content: "";                 
-    position: absolute;
-    top: 0;
-    left: 100%;                 /* Start position off-screen to the right */
-    animation: scroll-left 10s linear infinite; /* Adjust duration as needed */
-}
-
 @keyframes scroll-left {
     0% {
-        transform: translateX(-100%); /* Start outside on the left */
+        transform: translateX(100%);
     }
     100% {
-        transform: translateX(100%);  /* End outside on the right */
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
     }
 }
 /**Extra-end**/
