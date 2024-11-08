@@ -431,6 +431,103 @@ h6,
     }
 }
 /**Extra-end**/
+/**Table- start**/
+/* Base styles for the comparison table */
+.comparison-table {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.table-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.3s;
+}
+
+/* Header row style */
+.header1 {
+    font-weight: bold;
+    font-size: 1.2em;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Column styles */
+.column {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    color: #4a4a4a;
+    font-size: 16px;
+}
+
+/* Highlighted middle column */
+.highlight {
+    background-color: #6c47ff;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Hover animation for the middle column */
+.highlight:hover {
+    background-color: #543bcc;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 12px rgba(108, 71, 255, 0.3);
+}
+
+/* Animation effect for rows */
+.table-row {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.table-row:nth-child(2) { animation-delay: 0.1s; }
+.table-row:nth-child(3) { animation-delay: 0.2s; }
+.table-row:nth-child(4) { animation-delay: 0.3s; }
+.table-row:nth-child(5) { animation-delay: 0.4s; }
+
+/* Keyframes for fade-in animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Rounded corners for the first and last row */
+.header1 .column:first-child {
+    border-top-left-radius: 12px;
+}
+.header1 .column:last-child {
+    border-top-right-radius: 12px;
+}
+.table-row:last-child .column:first-child {
+    border-bottom-left-radius: 12px;
+}
+.table-row:last-child .column:last-child {
+    border-bottom-right-radius: 12px;
+}
+.h1forcomp{
+    text-align: center;
+}
+
+
+/**Table-- end**/
+
 /**FAQ***/
 .forfaq{
   font-family: Arial, sans-serif;
