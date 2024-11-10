@@ -430,6 +430,48 @@ h6,
         transform: translateX(100%);
     }
 }
+.spy{
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f4f4f8;
+      overflow: hidden;
+    }
+
+    /* Loading screen overlay */
+    #loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.9);
+      z-index: 9999;
+    }
+
+    /* Logo spinner */
+    .logo-spinner {
+      width: 100px; /* Adjust size as needed */
+      height: 100px;
+      animation: spin 2s linear infinite;
+    }
+
+    /* Keyframes for spinning animation */
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    
+
+
 /**Extra-end**/
 /**Table- start**/
 /* Base styles for the comparison table */
