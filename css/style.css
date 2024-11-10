@@ -290,6 +290,7 @@ h6,
     border-radius: 20px;
     font-size: 0.9em;
     cursor: pointer;
+    animation: pulse 0.3s infinite;
 }
 .tag-button:hover{
     background-color: #55fac3;
@@ -353,6 +354,14 @@ h6,
 .sql { top: 75px; left: 0; }
 .java { bottom: 75px; right: 75px; }
 
+ @keyframes pulse {
+    0%, 100% {
+      transform: scale(1); /* Normal size */
+    }
+    50% {
+      transform: scale(1.1); /* Slightly larger */
+    }
+  }
 @keyframes rotateClockwise {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
